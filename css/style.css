@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* 요소의 여백 초기화 */
+html, body, h1, h2, h3, h4, h5, h6, p{
+  margin: 0;
+  padding: 0;
+}
+/* 제목 크기 초기화 */
+h1, h2, h3, h4, h5, h6{
+  font-size: 1em;
+  font-weight: normal;
+}

@@ -159,14 +159,15 @@ a {
 
 .main-menu>li {
     float: left;
+    position: relative;
 }
 
 .main-menu>li>a {
     font-size: 1.6rem;
     font-family: "Noto Sans Bold";
     color: rgba(255, 255, 255, 0.95);
-    padding: 0px 20px;
     display: block;
+    padding: 0 20px;
     line-height: 45px;
     border-left: 2px solid rgba(255, 255, 255, 0.9);
     text-shadow: 1px 0px 0 #000, 0px 1px 0 #000, -1px 0px 0 #000, 0px -1px 0 #000;
@@ -174,7 +175,7 @@ a {
 
 .main-menu>li>a:hover {
     /*color: hsla(45, 80%, 80%, 1);*/
-    color: yellow;
+    color: #ff0;
 }
 
 .main-menu>li>a:hover::after {
@@ -187,30 +188,39 @@ a {
     list-style-type: none;
     background: lime;
     position: absolute;
+    white-space: nowrap;
+    top: 47px;
+}
+
+.main-menu ul li {
+    display: inline-block;
+}
+
+.about-html {
+    display: block;
+    top: 0;
+    left: 0;
+}
+
+.about-css {
     display: none;
 }
 
+.web-standards {
+    display: none;
+}
 
-/*
-.about-html{
-  display: block;
+.web-accessibility {
+    display: none;
 }
-.about-css{
-  display: none;
+
+.qna {
+    display: none;
 }
-.web-standards{
-  display: none;
+
+.archive {
+    display: none;
 }
-.web-accessibility{
-  display: none;
-}
-.qna{
-  display: none;
-}
-.archive{
-  display: none;
-}
-*/
 
 .visual {
     height: 120px;

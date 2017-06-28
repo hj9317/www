@@ -61,8 +61,13 @@ p {
 
 /*기본 스타일*/
 
+html {
+    font-size: 10px;
+}
+
 body {
     font-family: 'Noto Sans Regular', sans-serif;
+    font-size: 1.4rem;
 }
 
 
@@ -90,9 +95,9 @@ background-position: 0 0;*/
 /* 헤더 */
 
 .header {
-    height: 115px;
     background-color: #fff;
     border-radius: 0 0 15px 15px;
+    min-height: 115px;
     position: relative;
 }
 
@@ -103,6 +108,25 @@ background-position: 0 0;*/
     position: absolute;
     top: 45px;
     left: 60px;
+}
+
+
+/* 텍스트링크 - 안내링크 */
+
+.info-menu {
+    background: pink;
+    list-style-type: none;
+}
+
+.info-menu li {
+    background: lime;
+    display: inline;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.info-menu li::after {
+    content: ":"
 }
 
 .visual {

@@ -195,6 +195,29 @@ a {
     display: inline-block;
 }
 
+
+/*선택자를 li대신 a로 하면, a에 hover붙이면 거기에 커서를 올리면*/
+
+
+/*밑에 깔리는 목록 앞에 점 붙여줌, r을 폰트로 하면 점,s는 별*/
+
+.main-menu ul a::before {
+    font-family: "webcafeIcon";
+    content: "s";
+    /*본인만 움직이고 다른애들은 건들이지 않음*/
+    position: relative;
+    /*아이콘을 약간 위로*/
+    top: 2px;
+}
+
+
+/*ctrl+shift+d 바로밑에 복붙*/
+
+.main-menu ul a:hover::before,
+.main-menu ul a:focus::before {
+    content: "c";
+}
+
 .about-html {
     display: block;
     top: 0;

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>float 속성 익히기</title>
+    <style>
+        .box {
+            background: yellow;
+            width: 500px;
+            /*overflow: hidden;*/
+            /*넘치는 영역이 얼마니 그만큼 늘여줌*/
+        }
+        /*자식요소 ,콘텐츠무조건*/
+        /*눈에 보이지 않는 상자를 만들어서 (박스의 자식이니까 마치 박스가 늘어난것처럼)*/
+        /*.box::after {
+            content: "";
+            display: block;
+            clear: both;}
+            /*inline성격의 상자를 블록으로 바꿈*/
+        
+        .box img {
+            float: right;
+            position: relative;
+            right: -50px;
+        }
+        
+        .note {
+            background: pink;
+            /* clear: both; 이제부터 얘는 플로트의 영향을 받지않아, 강제로 마진을 추가시켜서 안겹치게 함 */
+            clear: both;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="images/news.gif" alt=""> 여기에다가 그냥쓰면 바디에 들어가는건가
+    </div>
+    <div class="note">
+        그래걍 이렇게쓰면되나봐
+
+    </div>
+</body>
+
+</html>

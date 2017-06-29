@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>박스모델 속성</title>
+    <style>
+        .padding {
+            background: yellow;
+            /*글사이에 여백, top기준 시계방향*/
+            padding: 10px 20px 30px;
+            /*보더는 본문의 테두리*/
+            /*border: 1px solid black;*/
+            border-width: 5px 10px 15px 20px;
+            border-style: solid dotted dashed double;
+            border-color: aliceblue antiquewhite aqua aquamarine;
+        }
+        
+        .margin {
+            background: pink;
+            margin: 20px 30px 40px 50px;
+        }
+    </style>
+</head>
+
+/*본문내용은 ;로 안끝내도 ok, alt누르고 클릭해서 멀티로 수정가능*/
+
+<body>
+    <h1>margin 속성</h1>
+    <div class="margin">
+        요소박스의 바깥쪽여백A
+    </div>
+    <div class="margin">
+        요소박스의 바깥쪽여백B
+    </div>
+    <div class="margin">
+        요소박스의 바깥쪽여백C
+    </div>
+</body>
+
+</html>

@@ -273,6 +273,7 @@ a {
     left: 0;
     width: 100%;
     height: 120px;
+    animation: flower-ani 2s infinite alternate;
 }
 
 .visual::before {
@@ -281,6 +282,16 @@ a {
 
 .visual::after {
     background: url(images/ani_flower_03.png) no-repeat 300px 0, url(images/ani_flower_04.png) no-repeat 800px 0;
+    animation-delay: 1s;
+}
+
+@keyframes flower-ani {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .visual-text {

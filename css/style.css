@@ -96,11 +96,11 @@ a {
 /* 헤더 */
 
 .header {
-    min-height: 115px;
+    /*min-height: 115px;*/
     background-color: #fff;
     border-radius: 0 0 15px 15px;
     position: relative;
-    padding: 0 30px;
+    padding: 0 30px 40px 30px;
 }
 
 
@@ -162,7 +162,7 @@ a {
     position: relative;
 }
 
-.main-menu>li>a {
+.main-menu span {
     font-size: 1.6rem;
     font-family: "Noto Sans Bold";
     color: rgba(255, 255, 255, 0.95);
@@ -173,12 +173,15 @@ a {
     text-shadow: 1px 0px 0 #000, 0px 1px 0 #000, -1px 0px 0 #000, 0px -1px 0 #000;
 }
 
-.main-menu>li>a:hover {
+.main-menu span:hover,
+.main-menu span:focus {
     /*color: hsla(45, 80%, 80%, 1);*/
     color: #ff0;
+    outline: 0;
 }
 
-.main-menu>li>a:hover::after {
+.main-menu span:hover::after,
+.main-menu span:focus::after {
     content: "";
     display: block;
     border-top: 2px solid #181818;
@@ -213,35 +216,57 @@ a {
 
 /*ctrl+shift+d 바로밑에 복붙*/
 
+
+/*포커스가 가면 바뀜*/
+
 .main-menu ul a:hover::before,
 .main-menu ul a:focus::before {
     content: "c";
 }
 
-.about-html {
+
+/*여백주고 클릭영역 늘어나게 블록화해서 안겹치게*/
+
+.main-menu ul a {
+    padding: 8px 15px 7px 0;
+    /*background: orange;*/
     display: block;
-    top: 0;
+}
+
+
+/*block으로 하면 밑에 쫘르륵 보임*/
+
+.about-html {
+    display: none;
     left: 0;
 }
 
 .about-css {
     display: none;
+    left: 0;
 }
 
 .web-standards {
     display: none;
+    left: 0;
 }
+
+
+/*삐져나오므로 left값을 마이너스로,룰러로 재서*/
 
 .web-accessibility {
     display: none;
+    left: -140px;
 }
 
 .qna {
     display: none;
+    left: -170px;
 }
 
 .archive {
     display: none;
+    right: -25;
 }
 
 .visual {

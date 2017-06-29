@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>포지션 되기를</title>
+    <style>
+        h2 {
+            background: yellow;
+            position: relative;
+            top: 100px;
+            left: 200px;
+            z-index: 1;
+        }
+        
+        h3 {
+            background: white;
+            position: relative;
+            right: 0;
+            margin: 0;
+        }
+        
+        div {
+            position: relative;
+            height: 200px;
+            width: 500px;
+            background: skyblue;
+        }
+        
+        p {
+            background: lightgreen;
+        }
+        
+        span {
+            background: orange;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+        }
+        
+        .sticky {
+            position: sticky;
+            top: 50px;
+        }
+        
+        .heading {
+            height: 50px;
+            font-size: 24;
+            font-weight: bold;
+            background: gray;
+            color: wheat;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>대제목</h1>
+    <h2>중제목</h2>
+    <div class="relative">
+        <h3>소제목</h3>
+    </div>
+    <p>오호 난 스팬을 할거다<span>짜라란</span>봤지</p>
+    <p>오늘 따라 난 달라 자꾸 내맘을 슬쩍 바라</p>
+    <div>
+        <div class="heading sticky">스티키를 활용한 헤딩설정</div>
+        <p>스티키테스트ㅇㄴㅇㄴㅇㄴㅇㄴㅇㄴㅇㄴㅇㅇㄴㅇㄴㅇㄴㅇㄴㅇㄴ</p>
+    </div>
+
+</body>
+
+</html>

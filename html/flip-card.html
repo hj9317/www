@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flip Card 예제</title>
+    <style>
+        .container {
+            width: 200px;
+            height: 260px;
+            position: relative;
+            perspective: 800px;
+        }
+        
+        #card {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+        }
+        
+        .front,
+        .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+        
+        .front {
+            background: red;
+        }
+        
+        .back {
+            background: blue;
+            transform: rotateY(180deg);
+        }
+        
+        #card.flipped {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="card">
+            <img class="front" src="http://mylko72.maru.net/jquerylab/study/q-hearts.jpg">
+            <img class="back" src="http://mylko72.maru.net/jquerylab/study/back.jpg">
+        </div>
+    </div>
+    <button classs="btn">Click Me</button>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>
+        $(function() {
+            $("#card").click(function() {
+                $(this).toggleClass("flipped")
+            });
+        });
+        $(function() {
+            $(".btn").on("click", function() {
+                $("#card").toggleClass("flipped");
+            });
+        });
+    </script>
+</body>
+
+</html>

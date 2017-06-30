@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Transition 익히기</title>
+    <style>
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background: orange;
+            /*transition: border-radius 1s 0s ease-in-out, background 2s 1s ease-in-out;*/
+            transition: all 1s ease-in-out;
+        }
+        
+        .box1:hover,
+        .box1:focus {
+            border-radius: 50%;
+            background: blue;
+            outline: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1" tabindex="0"></div>
+
+
+</body>
+
+</html>

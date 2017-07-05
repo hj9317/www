@@ -6,6 +6,27 @@
     <title>웹카페 - 웹접근성 및 웹표준, HTML5, CSS3</title>
     <link rel="shortcut icon" href="images/common/webcafe.ico">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .term {
+            background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+            border-radius: 5px;
+            border: 1px solid lightgray;
+        }
+        
+        .term img {
+            float: left;
+            margin-right: 15px;
+            margin-left: 0;
+        }
+        
+        .term-list-thumbnail {
+            color: blue;
+        }
+        
+        .term list {
+            margin: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -113,6 +134,20 @@
                         <li><a href="https://validator.w3.org/" title="마크업 유효성검사 사이트로 이동" target="_blank">HTML Markup Validation</a></li>
                         <li><a href="http://jigsaw.w3.org/css-validator/" title="CSS 유효성검사 사이트로 이동" target="_blank">CSS Validation Service</a></li>
                     </ul>
+                </div>
+                <div class="term">
+                    <h2 class="term-heading">웹 관련 용어</h2>
+                    <!--dl안에 dt:주어 dd:설명-->
+                    <dl class="term-list">
+                        <dt class="term-list-subject">웹표준 이란?</dt>
+                        <dd class="term-list-thumbnail">
+                            <img src="images/web_standards.gif" width="50" height="60" alt="W3C 로고">
+                        </dd>
+                        <dd class="term-list-brief">
+                            W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...
+                        </dd>
+
+                    </dl>
                 </div>
             </div>
             <div class="group group2">콘텐츠컬럼2</div>

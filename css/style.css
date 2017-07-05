@@ -27,7 +27,8 @@
 
 /* 숨김 콘텐츠 */
 
-legend {
+legend,
+.hidden {
     position: absolute;
     left: -9999em;
 }
@@ -395,7 +396,7 @@ a {
     cursor: pointer;
     color: #fff;
     background: red;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 2px 2px 2px 2px;
 }
 
 .member {
@@ -428,12 +429,55 @@ a {
     background: red;
 }
 
+.icon-user::before {
+    content: '\e800';
+}
+
+.icon-right-open::before {
+    content: '\e801';
+}
+
 .join {
     float: left;
 }
 
 .find {
     float: right;
+}
+
+
+/*유효성 검사 배너 링크*/
+
+.validation {
+    margin-top: 20px;
+}
+
+.validation-list li {
+    /*아이콘 먼저 선언*/
+    /*아이콘의 위치를 좌표로 지정,50퍼센트를 쓰면 상자의 중간(y축)에 매칭됨*/
+    background: url("images/validation_icon.png") no-repeat 20px 50%, linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    border-radius: 15px;
+    border: 1px solid lightgray;
+    /*앞의 아이콘없애기*/
+    list-style-type: none;
+    /*그냥 마진하면 모든방향으로 적용*/
+    margin-bottom: 10px;
+    /*박스의 길이를 늘림*/
+    height: 30px;
+    /*안의 글씨를 가운데 정렬한 것 처럼*/
+    line-height: 30px;
+    /*패딩은 박스가 움직이고 띄어쓰기는 그대로*/
+    text-indent: 45px;
+}
+
+
+/*전체 박스에 링크걸기위해, 전체를 블럭화*/
+
+
+/*마진은 겹치면 상쇄*/
+
+.validation-list a {
+    display: block;
 }
 
 .slogan {

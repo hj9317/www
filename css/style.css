@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import "fontello.css";
 
 /* 웹폰트 선언 */
 
@@ -24,7 +25,7 @@
 }
 
 
-/*숨김 콘텐츠*/
+/* 숨김 콘텐츠 */
 
 legend {
     position: absolute;
@@ -198,7 +199,7 @@ a {
     list-style-type: none;
     position: absolute;
     white-space: nowrap;
-    top: 47px;
+    top: 45px;
 }
 
 .main-menu ul li {
@@ -253,7 +254,7 @@ a {
 }
 
 
-/*비주얼*/
+/* 비주얼 */
 
 @keyframes text-ani {
     0% {
@@ -264,8 +265,24 @@ a {
     100% {
         font-size: 24px;
         color: rgba(0, 0, 0, 1);
-        transform: translate(400px, 75px);
+        transform: translate(400px, 70px);
     }
+}
+
+@keyframes flower-ani {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+.visual-text {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0);
+    animation: text-ani 0.5s forwards ease-in-out;
 }
 
 .visual {
@@ -285,28 +302,12 @@ a {
 }
 
 .visual::before {
-    background: url(images/ani_flower_01.png) no-repeat 0px -10px, url(images/ani_flower_02.png) no-repeat 670px 0;
+    background: url("images/ani_flower_01.png") no-repeat 0 -10px, url(images/ani_flower_02.png) no-repeat 670px 0;
 }
 
 .visual::after {
     background: url(images/ani_flower_03.png) no-repeat 300px 0, url(images/ani_flower_04.png) no-repeat 800px 0;
     animation-delay: 1s;
-}
-
-@keyframes flower-ani {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-.visual-text {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    display: inline-block;
-    color: rgba(0, 0, 0, 0);
-    animation: text-ani 0.5s forwards ease-in-out;
 }
 
 .main-content {
@@ -334,13 +335,13 @@ a {
 }
 
 
-/*로그인*/
+/*로그인 */
 
 .login {
-    background: radial-gradient(circle at right top, #f6d365, #fda085);
+    background: radial-gradient(circle at right top, #e5892d, #e0652c);
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.2);
 }
 
 .login-heading {
@@ -354,6 +355,7 @@ a {
     background: #fff;
     margin-top: 10px;
     border-radius: 5px 5px 0 0;
+    padding: 10px;
 }
 
 .login-form fieldset {
@@ -364,36 +366,74 @@ a {
     position: relative;
 }
 
-.login-form label {
-    display: inline-block;
-    width: 4em;
-}
-
 .user-pw {
     margin-top: 5px;
 }
 
-.login-form input {
-    box-sizing: border-box;
-    width: 90px;
-    height: 28px;
-    border: 1px solid #aaa;
-    padding: 1px 1px 1px 5px;
+.login-form label {
+    display: inline-block;
+    width: 4em;
+    cursor: pointer;
 }
 
-.member {
-    border-radius: 0 0 5px 5px;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
+.login-form input {
+    box-sizing: border-box;
+    width: 95px;
+    height: 22px;
+    border: 1px solid #aaa;
+    padding: 1px 1px 1px 5px;
 }
 
 .btn-login {
     width: 50px;
     height: 50px;
+    border: 0;
+    padding: 0 5px;
     position: absolute;
     top: 0;
     right: 0;
+    cursor: pointer;
+    color: #fff;
+    background: red;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.member {
+    padding: 0 10px 10px 10px;
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+}
+
+
+/*플로트이슈를 해결하기 위한 clearfix*/
+
+
+/*플로트 해결위해 ->강제로 마진을 줘야함*/
+
+
+/*멤버의 세번째 자식 생성,가상요소는 콘텐츠줘야함*/
+
+.member::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.icon-user::before,
+.icon-right-open::before {
+    background: red;
+}
+
+.join {
+    float: left;
+}
+
+.find {
+    float: right;
 }
 
 .slogan {
@@ -405,9 +445,5 @@ a {
 }
 
 .footer {
-    height: 10vh;
-}
-
-footer {
     height: 10vh;
 }

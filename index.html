@@ -142,9 +142,18 @@
             </div>
             <div class="group group2">
                 <div class="search">
+                    <!--숨김제목-->
+                    <h2 class="search-heading hidden">검색</h2>
+                    <!--submit이 완료되면 메세지가 뜸-->
+                    <form action="javascript:alert('검색이 완료되었습니다.');" class="search-form"></form>
+                    <!--필드셋 자식 레전드-->
                     <fieldset>
+                        <legend>검색폼</legend>
+                        <!--for과 id로 이음-->
                         <img src="css/images/btn_search.png" height="20" width="20" alt="">
-                        <label for="user-email">자료검색</label>
+                        <label for="search">자료검색</label>
+                        <input type="search" id="search" class="keyword">
+                        <!--required 필수값입력-->
                         <input id="search" required placeholder="검색어를 입력하세요.">
                         <button type="submit" class="btn-search">검색</button>
                     </fieldset>

@@ -82,7 +82,11 @@ body {
 /* 레이아웃 */
 
 .wrapper {
-    background: url(images/bg_flower.png) no-repeat 50% 0, linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 1) 100%);
+    background: url(images/배그.jpg)no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     height: 100vh;
 }
 
@@ -160,7 +164,7 @@ a {
 /* 메인 메뉴 */
 
 .main-menu {
-    background: linear-gradient(to bottom, #e5892d 0%, #e0652c 35%, #e0652c 65%, #e5892d 100%);
+    background: linear-gradient(to bottom, #60802d 0%, #50902d 35%, #50992d 65%, #609000 100%);
     list-style-type: none;
     border-top: 2px solid #181818;
     border-radius: 0 0 5px 5px;
@@ -282,9 +286,9 @@ a {
 }
 
 .visual-text {
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: Georgia, "Times New Roman", Times, serif, Bold;
     display: inline-block;
-    color: rgba(0, 0, 0, 0);
+    color: white;
     animation: text-ani 0.5s forwards ease-in-out;
 }
 
@@ -305,11 +309,11 @@ a {
 }
 
 .visual::before {
-    background: url("images/ani_flower_01.png") no-repeat 0 -10px, url(images/ani_flower_02.png) no-repeat 670px 0;
+    background: url("images/작아.png") no-repeat 0 -10px, url(images/작아.png) no-repeat 670px 0;
 }
 
 .visual::after {
-    background: url(images/ani_flower_03.png) no-repeat 300px 0, url(images/ani_flower_04.png) no-repeat 800px 0;
+    background: url(images/작아.png) no-repeat 300px 0, url(images/작아.png) no-repeat 800px 0;
     animation-delay: 1s;
 }
 
@@ -341,7 +345,7 @@ a {
 /*로그인 */
 
 .login {
-    background: radial-gradient(circle at right top, #e5892d, #e0652c);
+    background: radial-gradient(circle at right top, #60892d, #30992d);
     padding: 10px;
     border-radius: 10px;
     box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.2);
@@ -397,7 +401,8 @@ a {
     right: 0;
     cursor: pointer;
     color: #fff;
-    background: red;
+    font-family: "Noto Sans Bold";
+    background: #005000;
     border-radius: 2px 2px 2px 2px;
 }
 
@@ -494,25 +499,22 @@ a {
     padding: 10px 15px;
 }
 
-.term-list-thumbnail,
-.term-list-brief {
-    margin: 0;
-}
-
 .term-heading {
     font-size: 1.6rem;
     font-family: "Noto Sans Bold";
 }
 
 .term-list {
-    background: yellow;
     margin: 10px 0 0 0;
 }
 
 
 /*자식을 다 플로크 시켜서 자식을 잃어버렸으니 가상의 자식을 넣어 길이 늘림*/
 
+.term-list::before,
 .term-list::after {
+    content: "";
+    display: block;
     clear: both;
 }
 
@@ -522,9 +524,14 @@ a {
     float: right;
 }
 
+.term-list-thumbnail,
+.term-list-brief {
+    margin: 0;
+}
+
 .term-list-subject {
-    background: lavender;
-    color: blue;
+    color: #005000;
+    font-family: "Noto Sans Bold";
 }
 
 .term-list-thumbnail {
@@ -839,6 +846,90 @@ a {
 .related-list a {
     display: block;
     line-height: 25px;
+}
+
+
+/*인기 사이트*/
+
+.favorite {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #eee, #ccc) repeat scroll 0 0;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px;
+    position: relative;
+}
+
+.favorite-heading {
+    font-family: "Noto Sans Bold";
+    font-size: 1.5rem;
+}
+
+.favorite-heading span {
+    color: #f00;
+}
+
+.favorite-list {
+    margin-top: 10px;
+    overflow: hidden;
+    padding: 0 0;
+}
+
+.favorite-list li {
+    counter-increment: number;
+    line-height: 20px;
+    position: relative;
+    list-style-type: none;
+    position: relative;
+}
+
+.favorite-list li::before {
+    background: #aaa none repeat scroll 0 0;
+    border-radius: 3px;
+    color: #fff;
+    content: counter(number, decimal);
+    font-size: 1.2rem;
+    margin-right: 5px;
+    padding: 0 5px;
+}
+
+.up,
+.down,
+.stop {
+    background: rgba(0, 0, 0, 0) url("images/rank.png") no-repeat scroll 0 0;
+    box-sizing: border-box;
+    height: 11px;
+    overflow: hidden;
+    padding-top: 11px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 9px;
+}
+
+.stop {
+    background-position: 0 50%;
+}
+
+.down {
+    background-position: 0 100%;
+}
+
+.favorite-more {
+    padding: 8px;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+}
+
+.favorite-more::before {
+    color: #005000;
+    content: "p";
+    font-family: "webcafeIcon";
+    margin-right: 3px;
+    position: relative;
+    top: 2px;
 }
 
 

@@ -74,6 +74,8 @@ html {
 body {
     font-family: 'Noto Sans Regular', sans-serif;
     font-size: 1.4rem;
+    /*줄사이의 간격 없음:1*/
+    line-height: 1.2;
 }
 
 
@@ -117,7 +119,7 @@ a {
 
 .logo {
     position: absolute;
-    top: 50px;
+    top: 45px;
     left: 60px;
 }
 
@@ -479,6 +481,368 @@ a {
 .validation-list a {
     display: block;
 }
+
+
+/*웹 관련 용어*/
+
+.term {
+    background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    /*첫번째건 위아래, 다음은 좌우의 패딩*/
+    padding: 10px 15px;
+}
+
+.term-list-thumbnail,
+.term-list-brief {
+    margin: 0;
+}
+
+.term-heading {
+    font-size: 1.6rem;
+    font-family: "Noto Sans Bold";
+}
+
+.term-list {
+    background: yellow;
+    margin: 10px 0 0 0;
+}
+
+
+/*자식을 다 플로크 시켜서 자식을 잃어버렸으니 가상의 자식을 넣어 길이 늘림*/
+
+.term-list::after {
+    clear: both;
+}
+
+.term-list-subject,
+.term-list-brief {
+    width: 145px;
+    float: right;
+}
+
+.term-list-subject {
+    background: lavender;
+    color: blue;
+}
+
+.term-list-thumbnail {
+    float: left;
+}
+
+.term-list-brief {
+    margin-top: 5px !important;
+}
+
+
+/*검색 폼*/
+
+.search fieldset {
+    border: 0;
+    padding-left: 15px;
+    padding-top: 8px;
+}
+
+.search {
+    background: linear-gradient(to top, white 0%, #e2ebf0 100%);
+    border-left: 1px solid #aaa;
+    border-top: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    border-radius: 10px 10px 0 0px;
+}
+
+.search-form fieldset {}
+
+.search label {
+    ;
+}
+
+.search label::before {
+    content: "";
+}
+
+.search img {
+    position: relative;
+    top: 0px;
+}
+
+.search input {
+    margin-left: 7px;
+    margin-right: 5px;
+    width: 190px;
+    height: 22px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+}
+
+.btn-search {
+    width: 45px;
+    height: 25px;
+    color: white;
+    font-family: "Noto Sans Regular";
+    background: linear-gradient(to top, gray, black);
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* 공지사항 및 자료실 */
+
+.board {
+    margin-top: 20px;
+    position: relative;
+    height: 180px;
+}
+
+.notice-heading,
+.pds-heading {
+    float: left;
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 0 0;
+    color: #999;
+    background: linear-gradient(to bottom, #eee, #ccc);
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.act .notice-heading,
+.act .pds-heading {
+    border-color: #e0652c;
+    border-bottom-color: #fff;
+    background: #fff;
+    color: #e0652c;
+    outline: 0;
+}
+
+.notice-list,
+.pds-list {
+    box-sizing: border-box;
+    width: 100%;
+    list-style-type: square;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    padding-left: 20px;
+}
+
+.notice-list li,
+.pds-list li {
+    margin: 5px 0;
+}
+
+.notice-list a,
+.pds-list a {
+    width: 285px;
+    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.notice-list time,
+.pds-list time {
+    float: right;
+}
+
+.notice-more,
+.pds-more {
+    position: absolute;
+    top: 0;
+    right: -8px;
+    padding: 8px;
+}
+
+.notice-more::before,
+.pds-more::before {
+    content: "p";
+    font-family: "webcafeIcon";
+    color: hsla(120, 100%, 30%, 1);
+    position: relative;
+    top: 2px;
+}
+
+.notice-list,
+.pds-list,
+.notice-more,
+.pds-more {
+    display: none;
+}
+
+.act .notice-list,
+.act .pds-list,
+.act .notice-more,
+.act .pds-more {
+    display: block;
+}
+
+
+/* 새소식 */
+
+.news {
+    margin-top: 20px;
+    position: relative;
+}
+
+.news::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, #aaa, #fff);
+    top: 35px;
+    left: 0;
+}
+
+.news-heading {
+    color: #e0652c;
+    font-size: 1.6rem;
+    font-family: "Noto Sans Bold";
+}
+
+.news-item {
+    margin-top: 30px;
+    padding-left: 130px;
+    position: relative;
+}
+
+.new-item a {
+    display: block;
+}
+
+.news-item-heading {
+    font-family: "Noto Sans Bold";
+}
+
+.news-item-heading::before {
+    content: "r";
+    font-family: "webcafeIcon";
+    position: relative;
+    top: 2px;
+}
+
+.news-item-date,
+.news-item-brief {
+    margin: 5px 0 0 1em;
+    display: block;
+}
+
+.news-item-thumbnail {
+    margin: 0;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    text-align: center;
+}
+
+.news-item-thumbnail img {
+    margin-bottom: 15px;
+    box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.news-more {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    padding: 8px;
+}
+
+.news-more::before {
+    content: "p";
+    font-family: "webcafeIcon";
+    color: hsla(120, 100%, 30%, 1);
+    position: relative;
+    top: 2px;
+}
+
+
+/*신규 이벤트 및 관련 사이트*/
+
+.event {
+    border-bottom: 1px solid #aaa;
+    position: relative;
+}
+
+.related {
+    margin-top: 10px;
+}
+
+.event-related {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #eee, #ccc) repeat scroll 0 0;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.event-heading,
+.related-heading {
+    font-family: "Noto Sans Bold";
+    font-size: 1.5rem;
+}
+
+.event-heading span,
+.related-heading span {
+    color: #f00;
+}
+
+#event-detail {
+    margin-top: 10px;
+}
+
+#event-detail img {
+    border: 1px solid #aaa;
+    box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.5);
+}
+
+#event-detail em {
+    font-style: normal;
+}
+
+.btn-event {
+    height: 18px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.btn-event-prev,
+.btn-event-next {
+    background: rgba(0, 0, 0, 0) url("images/back_forward.png") no-repeat scroll 0 0;
+    border: 0 none;
+    height: 0;
+    overflow: hidden;
+    padding: 18px 0 0;
+    width: 19px;
+}
+
+.btn-event-next {
+    background-position: 100% 0%;
+}
+
+.related-list {
+    background: #fff;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    height: 25px;
+    margin-top: 10px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.related-list:hover,
+.related-list:focus {
+    height: 125px;
+    padding: 10px 0;
+}
+
+.related-list a {
+    display: block;
+    line-height: 25px;
+}
+
+
+/*슬로건*/
 
 .slogan {
     height: 10vh;
